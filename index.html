@@ -9,28 +9,53 @@
 </head>
 <body>
 
-  <button class="openForm">Open Form</button>
-  
-  <dialog>
-    <form id="form">
-      <label for="author">Author</label><input type="text" name="author" id="author">
-      <label for="name">Title</label><input type="text" name="name" id="name">
-      <label for="pages">Pages</label><input type="text" name="pages" id="pages">
-      <label for="read">Read</label><input type="text" name="read" id="read">
-      <button type="submit">submit</button>
-      <button type="button" class="closeForm">Close</button>
-    </form>
-  </dialog>
+  <div class="header">
+    <h1>Library</h1>
+  </div>
 
-  <button class="display">Display Table</button>
-  <p></p>
-  <table>
-    <header>
-      <th>Author</th>
-      <th>Title</th>
-      <th>Pages</th>
-      <th>Read</th>
-    </header>
-  </table>
+  <div class="main">
+    <div class="sidebar">
+      <button class="openForm">Add Book</button>
+    
+      <dialog>
+        <form id="form">
+          <div class="nowrap">
+            <label for="author">Author</label><input type="text" name="author" id="author">
+          </div>
+          <div class="nowrap">
+            <label for="name">Title</label><input type="text" name="name" id="name">
+          </div>
+          <div class="nowrap">
+            <label for="pages">Pages</label><input type="text" name="pages" id="pages">
+          </div>
+          <div class="nowrap">
+            <label for="read">Read</label><input type="checkbox" name="read" id="read">
+          </div>
+          <div class="nowrap">
+            <button type="submit" class="submit">submit</button>
+            <button type="button" class="closeForm">Close</button>
+          </div>
+        </form>
+      </dialog>
+  
+      <button class="display">Display Books</button>
+      <p></p>
+    </div>
+
+    <div class="table">
+      <table>
+        <tr>
+          <th>Author</th>
+          <th>Title</th>
+          <th>Pages</th>
+          <th>Read</th>
+          <th>Delete</th>
+          <th>Toggle Read</th>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+  
 </body>
 </html>
