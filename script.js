@@ -49,6 +49,7 @@ formInput.addEventListener("submit", (event) => {
 
 formDisplay.addEventListener("click", () => {
   myLibrary.forEach((book) => {
+    if (table.rows.length < myLibrary.length + 1) {
     let newRow = table.insertRow(1);
     let cell1 = newRow.insertCell(0);
     let cell2 = newRow.insertCell(1);
@@ -66,5 +67,6 @@ formDisplay.addEventListener("click", () => {
       myLibrary.splice(myLibrary.indexOf(book));
       newRow.remove();
     })
+    }
   })
 });
