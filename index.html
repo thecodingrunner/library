@@ -8,16 +8,28 @@
   <script src="script.js" defer></script>
 </head>
 <body>
-  <form id="form" onsubmit="return false;">
-    <input type="text" name="name" id="name">
-    <input type="text" name="pages" id="pages">
-    <button type="submit">submit</button>
-  </form>
+
+  <button class="open-button" onclick="openForm()">Open Form</button>
+  
+  <div class="form-popup" id="myForm">
+    <form id="form">
+      <label for="author">Author</label><input type="text" name="author" id="author">
+      <label for="name">Title</label><input type="text" name="name" id="name">
+      <label for="pages">Pages</label><input type="text" name="pages" id="pages">
+      <label for="read">Read</label><input type="text" name="read" id="read">
+      <button type="submit">submit</button>
+      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+  </div>
+
+  <button class="display">Display Table</button>
   <p></p>
   <table>
     <header>
-      <th>Name</th>
+      <th>Author</th>
+      <th>Title</th>
       <th>Pages</th>
+      <th>Read</th>
     </header>
   </table>
 </body>
